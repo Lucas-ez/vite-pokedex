@@ -4,17 +4,18 @@ import { useEffect, useState } from 'react'
 import { TypeLabel } from '../../components'
 
 const getRandomPokemon = async ({setPokemon}) => {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${Math.floor(Math.random() * 1009)}`)
-      .then(res => {
-        return res.json()
-      })
-      .then(data => {
-        setPokemon({
+  fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+    .then(res => res.json())
+    .then(data => {
+      const randomName = data.results[Math.floor(Math.random() * data.results.length)].name
+      fetch(`https://pokeapi.co/api/v2/pokemon/${randomName}`)
+        .then(res => res.json())
+        .then(data => setPokemon({
           'id': data.id,
           'name': data.name,
           'sprite': data.sprites.front_default,
           'types': data.types.map(type => type.type.name),
-        })
+        }))
     })
 }
 
