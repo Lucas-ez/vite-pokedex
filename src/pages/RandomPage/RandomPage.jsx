@@ -57,7 +57,7 @@ const RandomPage = () => {
           </button>
         </div>
         :
-        <div>error</div>
+        <div>Loading...</div>
       }
     </div>
   )
