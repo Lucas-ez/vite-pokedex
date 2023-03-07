@@ -1,0 +1,44 @@
+@import './../../App.scss';
+
+.search-bar {
+  input {
+    padding: .2rem .8rem;
+    border-radius: 8px 0 0 8px;
+    height: 40px;
+  }
+
+  ul {
+    position: absolute;
+    z-index: 10;
+    transform: translate(0, 1rem);
+    border-radius: 10px;
+
+    
+    li {
+      font-size: 20px;
+      &:hover {
+        background-color: $clr-primary-dark;
+      }
+      div {
+        padding: .2rem 1rem;
+      }
+      
+      border-inline: 4px solid $clr-primary-dark;
+      &:first-child {
+        border-radius: 8px 8px 0 0;
+        border-top: 4px solid $clr-primary-dark;
+      }
+      &:last-child {
+        border-radius: 0 0 8px 8px;
+        border-bottom: 4px solid $clr-primary-dark;
+      }
+    }
+  }
+
+  button {
+    height: 40px;
+    width: 40px;
+    border-radius: 0 8px 8px 0;
+    padding: 0;
+  }
+}

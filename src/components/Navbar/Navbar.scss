@@ -1,0 +1,36 @@
+@import './../../App.scss';
+
+.navbar {
+  .container {
+    .links {
+      .link {
+        padding: 1.2rem 1rem;
+        cursor: pointer;
+        &:hover {
+          background-color: $clr-primary-dark;
+        }  
+      }
+
+      .type-label{
+        position: relative;
+        .type-list {
+          display: none;
+          position: absolute;
+          background-color: $clr-primary;
+          transform: translate(-1rem, 1.2rem);
+          &-item {
+            padding: .4rem .8rem;
+            &:hover {
+              background-color: $clr-primary-dark;
+            }
+          }
+        }
+        
+        &:hover .type-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}

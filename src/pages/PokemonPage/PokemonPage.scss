@@ -1,0 +1,42 @@
+.pokemon-page {
+  .container {
+    min-height: 100vh;
+    align-items: start;
+    gap: 1rem;
+    padding-block: 2rem;
+
+    // top
+    section:nth-child(1) {
+      gap: 1rem;
+    }
+
+    //middle
+    section:nth-child(2) {
+      img {
+        max-width: 400px;
+        max-height: 400px;
+      }
+
+      .stats {
+        max-width: 400px;
+        align-items: start;
+        gap: 0.8rem;
+
+        border-radius: 8px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.36);
+        padding: 1.2rem 1.2rem;
+      }
+    }
+
+    //bottom
+    section:nth-child(3) {
+      border-radius: 8px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.36);
+      padding: 1.2rem 1.2rem;
+
+      img {
+        width: 20%;
+      }
+    }
+  }
+}
